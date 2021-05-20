@@ -1,6 +1,6 @@
 #Calculadora
 
-Teste de performance - TP2
+>Teste de performance - TP2
 
 No Teste de Performance 2, você vai colocar em prática as seguintes habilidades desenvolvidas durante a etapa 2:
 

@@ -16,6 +16,61 @@ public class NewJFrame extends javax.swing.JFrame {
      */
     public NewJFrame() {
         initComponents();
+        
+        jRadioButtonOn.setEnabled(false);
+    }
+    
+    public void enable(){
+        jTextFieldVisor.setEnabled(true);
+        
+        jRadioButtonOn.setEnabled(false);  //botão ON desabilitado
+        jRadioButtonOff.setEnabled(true);  // botão off habilitado
+        
+        jButton0.setEnabled(true);
+        jButton01.setEnabled(true);
+        jButton02.setEnabled(true);
+        jButton03.setEnabled(true);
+        jButton04.setEnabled(true);
+        jButton05.setEnabled(true);
+        jButton06.setEnabled(true);
+        jButton9.setEnabled(true); //corresponde ao button07
+        jButton08.setEnabled(true);
+        jButton09.setEnabled(true);
+        jButtonApagar.setEnabled(true);
+        jButtonDividir.setEnabled(true);
+        jButtonIgual.setEnabled(true);
+        jButtonMultiplicar.setEnabled(true);
+        jButtonMais.setEnabled(true);
+        jButtonMenos.setEnabled(true);
+        jButtonPonto.setEnabled(true);
+        jButtonC.setEnabled(true);
+        
+    }
+    
+    public void disable() {
+        jTextFieldVisor.setEnabled(false);
+        
+        jRadioButtonOn.setEnabled(true);
+        jRadioButtonOff.setEnabled(false);
+
+        jButton0.setEnabled(false);
+        jButton01.setEnabled(false);
+        jButton02.setEnabled(false);
+        jButton03.setEnabled(false);
+        jButton04.setEnabled(false);
+        jButton05.setEnabled(false);
+        jButton06.setEnabled(false);
+        jButton9.setEnabled(false); //corresponde ao button07
+        jButton08.setEnabled(false);
+        jButton09.setEnabled(false);
+        jButtonApagar.setEnabled(false);
+        jButtonDividir.setEnabled(false);
+        jButtonIgual.setEnabled(false);
+        jButtonMultiplicar.setEnabled(false);
+        jButtonMais.setEnabled(false);
+        jButtonMenos.setEnabled(false);
+        jButtonPonto.setEnabled(false);
+        jButtonC.setEnabled(false);
     }
 
     /**
@@ -31,13 +86,13 @@ public class NewJFrame extends javax.swing.JFrame {
         buttonGroup1 = new javax.swing.ButtonGroup();
         buttonGroup2 = new javax.swing.ButtonGroup();
         buttonGroup3 = new javax.swing.ButtonGroup();
+        jButton07 = new javax.swing.JButton();
         jTextFieldVisor = new javax.swing.JTextField();
         jRadioButtonOn = new javax.swing.JRadioButton();
         jRadioButtonOff = new javax.swing.JRadioButton();
         jButtonApagar = new javax.swing.JButton();
         jButtonC = new javax.swing.JButton();
         jButtonMais = new javax.swing.JButton();
-        jButton07 = new javax.swing.JButton();
         jButton9 = new javax.swing.JButton();
         jButton08 = new javax.swing.JButton();
         jButton09 = new javax.swing.JButton();
@@ -57,6 +112,14 @@ public class NewJFrame extends javax.swing.JFrame {
         jButton22.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jButton22.setText("0");
 
+        jButton07.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jButton07.setText("7");
+        jButton07.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton07ActionPerformed(evt);
+            }
+        });
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jTextFieldVisor.setEditable(false);
@@ -65,6 +128,11 @@ public class NewJFrame extends javax.swing.JFrame {
         buttonGroup1.add(jRadioButtonOn);
         jRadioButtonOn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jRadioButtonOn.setText("ON");
+        jRadioButtonOn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButtonOnActionPerformed(evt);
+            }
+        });
 
         buttonGroup1.add(jRadioButtonOff);
         jRadioButtonOff.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
@@ -79,15 +147,22 @@ public class NewJFrame extends javax.swing.JFrame {
 
         jButtonC.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jButtonC.setText("C");
+        jButtonC.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonCActionPerformed(evt);
+            }
+        });
 
         jButtonMais.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jButtonMais.setText("+");
-
-        jButton07.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jButton07.setText("7");
+        jButtonMais.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonMaisActionPerformed(evt);
+            }
+        });
 
         jButton9.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jButton9.setText("1");
+        jButton9.setText("7");
         jButton9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton9ActionPerformed(evt);
@@ -96,15 +171,35 @@ public class NewJFrame extends javax.swing.JFrame {
 
         jButton08.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jButton08.setText("8");
+        jButton08.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton08ActionPerformed(evt);
+            }
+        });
 
         jButton09.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jButton09.setText("9");
+        jButton09.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton09ActionPerformed(evt);
+            }
+        });
 
         jButton05.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jButton05.setText("5");
+        jButton05.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton05ActionPerformed(evt);
+            }
+        });
 
         jButton06.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jButton06.setText("6");
+        jButton06.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton06ActionPerformed(evt);
+            }
+        });
 
         jButton01.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jButton01.setText("1");
@@ -124,27 +219,67 @@ public class NewJFrame extends javax.swing.JFrame {
 
         jButton03.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jButton03.setText("3");
+        jButton03.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton03ActionPerformed(evt);
+            }
+        });
 
         jButton04.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jButton04.setText("4");
+        jButton04.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton04ActionPerformed(evt);
+            }
+        });
 
         jButtonMultiplicar.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jButtonMultiplicar.setText("*");
+        jButtonMultiplicar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonMultiplicarActionPerformed(evt);
+            }
+        });
 
         jButtonMenos.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jButtonMenos.setText("-");
+        jButtonMenos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonMenosActionPerformed(evt);
+            }
+        });
 
         jButtonDividir.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jButtonDividir.setText("/");
+        jButtonDividir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonDividirActionPerformed(evt);
+            }
+        });
 
         jButtonIgual.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jButtonIgual.setText("=");
+        jButtonIgual.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonIgualActionPerformed(evt);
+            }
+        });
 
         jButton0.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jButton0.setText("0");
+        jButton0.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton0ActionPerformed(evt);
+            }
+        });
 
         jButtonPonto.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jButtonPonto.setText(".");
+        jButtonPonto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonPontoActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -162,9 +297,7 @@ public class NewJFrame extends javax.swing.JFrame {
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                         .addComponent(jButton05, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(layout.createSequentialGroup()
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                            .addComponent(jButton9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                            .addComponent(jButton07, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                         .addComponent(jButton08, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -226,7 +359,6 @@ public class NewJFrame extends javax.swing.JFrame {
                         .addGap(30, 30, 30)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jButton07, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jButton08, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jButton09, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jButtonMenos, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -255,11 +387,11 @@ public class NewJFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
-        // TODO add your handling code here:
+        jTextFieldVisor.setText(jTextFieldVisor.getText() + "7");
     }//GEN-LAST:event_jButton9ActionPerformed
 
     private void jRadioButtonOffActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonOffActionPerformed
-        // TODO add your handling code here:
+        disable();
     }//GEN-LAST:event_jRadioButtonOffActionPerformed
 
     private void jButton01ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton01ActionPerformed
@@ -269,6 +401,70 @@ public class NewJFrame extends javax.swing.JFrame {
     private void jButton02ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton02ActionPerformed
         jTextFieldVisor.setText(jTextFieldVisor.getText() + "2");
     }//GEN-LAST:event_jButton02ActionPerformed
+
+    private void jButton03ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton03ActionPerformed
+        jTextFieldVisor.setText(jTextFieldVisor.getText() + "3");
+    }//GEN-LAST:event_jButton03ActionPerformed
+
+    private void jButton04ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton04ActionPerformed
+        jTextFieldVisor.setText(jTextFieldVisor.getText() + "4");
+    }//GEN-LAST:event_jButton04ActionPerformed
+
+    private void jButton05ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton05ActionPerformed
+        jTextFieldVisor.setText(jTextFieldVisor.getText() + "5");
+    }//GEN-LAST:event_jButton05ActionPerformed
+
+    private void jButton06ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton06ActionPerformed
+        jTextFieldVisor.setText(jTextFieldVisor.getText() + "6");
+    }//GEN-LAST:event_jButton06ActionPerformed
+
+    private void jButton07ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton07ActionPerformed
+        jTextFieldVisor.setText(jTextFieldVisor.getText() + "7");
+    }//GEN-LAST:event_jButton07ActionPerformed
+
+    private void jButton08ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton08ActionPerformed
+        jTextFieldVisor.setText(jTextFieldVisor.getText() + "8");
+    }//GEN-LAST:event_jButton08ActionPerformed
+
+    private void jButton09ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton09ActionPerformed
+        jTextFieldVisor.setText(jTextFieldVisor.getText() + "9");
+    }//GEN-LAST:event_jButton09ActionPerformed
+
+    private void jButton0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton0ActionPerformed
+        jTextFieldVisor.setText(jTextFieldVisor.getText() + "0");
+    }//GEN-LAST:event_jButton0ActionPerformed
+
+    private void jButtonPontoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPontoActionPerformed
+        jTextFieldVisor.setText(jTextFieldVisor.getText() + ".");
+    }//GEN-LAST:event_jButtonPontoActionPerformed
+
+    private void jButtonIgualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonIgualActionPerformed
+        jTextFieldVisor.setText(jTextFieldVisor.getText() + "=");
+    }//GEN-LAST:event_jButtonIgualActionPerformed
+
+    private void jButtonDividirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDividirActionPerformed
+        jTextFieldVisor.setText(jTextFieldVisor.getText() + "/");
+    }//GEN-LAST:event_jButtonDividirActionPerformed
+
+    private void jButtonMultiplicarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMultiplicarActionPerformed
+        jTextFieldVisor.setText(jTextFieldVisor.getText() + "*");
+    }//GEN-LAST:event_jButtonMultiplicarActionPerformed
+
+    private void jButtonMenosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMenosActionPerformed
+        jTextFieldVisor.setText(jTextFieldVisor.getText() + "-");
+    }//GEN-LAST:event_jButtonMenosActionPerformed
+
+    private void jButtonMaisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMaisActionPerformed
+        jTextFieldVisor.setText(jTextFieldVisor.getText() + "+");
+    }//GEN-LAST:event_jButtonMaisActionPerformed
+
+    private void jButtonCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCActionPerformed
+        jTextFieldVisor.setText("");
+    }//GEN-LAST:event_jButtonCActionPerformed
+
+    private void jRadioButtonOnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonOnActionPerformed
+        enable();
+    }//GEN-LAST:event_jRadioButtonOnActionPerformed
 
     /**
      * @param args the command line arguments
